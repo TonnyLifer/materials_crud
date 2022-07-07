@@ -13,13 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('list_material');
-});
+Route::get('/', 'MaterialController@index')->name('list_material');
 
 Route::prefix('materials')->group(function () {
 
-    Route::get('/list', 'MaterialController@index')->name('list_material');
     Route::get('/create', 'MaterialController@create_view')->name('create_material');
     Route::post('/create_materials', 'MaterialController@create')->name('create_m');
     Route::post('/edit_materials', 'MaterialController@edit')->name('edit_m');
