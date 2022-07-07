@@ -10,11 +10,11 @@
 # Склонируйте репозиторий на компьютер.
 
 Выполните команду 
-## composer update
+`composer update`
 
 Подключите бд фалом .env
 
 Выполните миграции
 
-## php artisan migrate
-## php artisan migrate:refresh --seed
+`php artisan migrate`
+`php artisan migrate:refresh --seed`
